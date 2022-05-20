@@ -1,0 +1,29 @@
+{
+  "name": "cogip_challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
+    "sassContactNew" : "sass --watch sass/pages/mainContactNew.scss:public/styles/pages/contactNew/contactNew.css",
+    "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
+    "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css",
+    "sassList": "sass --watch sass/pages/mainList.scss:public/styles/pages/list/list.css",
+    "sassDetails": "sass --watch sass/pages/mainDetails.scss:public/styles/pages/details/details.css",
+    "sassError" : "sass --watch sass/pages/mainError.scss:public/styles/pages/error/error.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Alex-B9/Cogip_Challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Alex-B9/Cogip_Challenge/issues"
+  },
+  "homepage": "https://github.com/Alex-B9/Cogip_Challenge#readme",
+  "dependencies": {
+    "sass": "^1.51.0"
+  }
+}

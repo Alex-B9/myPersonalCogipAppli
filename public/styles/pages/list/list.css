@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+header {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+  color: #48AFCF;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a {
+  position: relative;
+  text-decoration: none;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #48AFCF;
+  bottom: -7px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:visited {
+  color: inherit;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #48AFCF;
+  padding: 20px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child a {
+  text-decoration: none;
+  color: #48AFCF;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 130px;
+  line-height: 5px;
+  background-image: url("/../public/assets/img/Vector1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-position-y: 400px;
+}
+body .titleContainer {
+  margin-top: 90px;
+  margin-bottom: 25px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .titleContainer h1 {
+  text-transform: uppercase;
+  color: #FFBF1C;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+}
+body .titleContainer h2 {
+  text-transform: uppercase;
+  color: #FFBF1C;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 48px;
+}
+body .add {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+body .add img {
+  width: 30px;
+  height: 35px;
+}
+body .add a {
+  text-decoration: none;
+  font-weight: 600;
+  color: #48AFCF;
+}
+body .add a:hover {
+  color: #1A4688;
+}
+
+.tableContainer {
+  margin-top: 90px;
+  margin-bottom: 50px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.tableContainer h3 {
+  color: #1A4688;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  text-transform: uppercase;
+}
+
+table {
+  border-collapse: collapse;
+}
+table th {
+  background-color: #48AFCF;
+  color: white;
+  border: 1px solid #B9B9B9;
+  padding: 10px;
+}
+table td {
+  border: 1px solid #B9B9B9;
+  padding: 15px;
+}
+table tr {
+  border: 1px solid #B9B9B9;
+  background-color: white;
+}
+table img {
+  width: 25px;
+  height: 25px;
+}
+
+/*# sourceMappingURL=list.css.map */

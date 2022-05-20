@@ -1,0 +1,17 @@
+{
+    "name": "diwaa/cogig_challenge",
+    "autoload": {
+        "psr-4": {
+            "App\\": "./"
+        }
+    },
+    "authors": [
+        {
+            "name": "Christopher Delecluse",
+            "email": "christopherdeleclusepro@gmail.com"
+        }
+    ],
+    "require": {
+      "ext-pdo": "*"
+    }
+}

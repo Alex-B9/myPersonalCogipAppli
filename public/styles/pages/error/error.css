@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+header {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+  color: #48AFCF;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a {
+  position: relative;
+  text-decoration: none;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #48AFCF;
+  bottom: -7px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:visited {
+  color: inherit;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #48AFCF;
+  padding: 20px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child a {
+  text-decoration: none;
+  color: #48AFCF;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  color: #373737;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 130px;
+  line-height: 5px;
+  background-image: url("/../public/assets/img/Vector1.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-attachment: fixed;
+  background-position-y: 360px;
+}
+body .errorContainer {
+  margin-top: 90px;
+  padding: 20px;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FFFFFF;
+  border-radius: 30px;
+  box-shadow: -23px 203px 82px rgba(0, 0, 0, 0.03), -13px 114px 69px rgba(0, 0, 0, 0.1), -6px 51px 51px rgba(0, 0, 0, 0.17), -1px 13px 28px rgba(0, 0, 0, 0.2), 0px 0px 0px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: row;
+}
+body .errorContainer .imgContainer {
+  width: 60%;
+}
+body .errorContainer .imgContainer img {
+  height: 400px;
+  transform: translateX(-25%);
+}
+body .errorContainer .errorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+body .errorContainer .errorInfo .titleContainer h1 {
+  text-transform: uppercase;
+  color: #FFBF1C;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  font-size: 60px;
+}
+body .errorContainer .errorInfo .titleContainer h2 {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: normal;
+}
+body .errorContainer .errorInfo button {
+  background-color: #FFBF1C;
+  border: none;
+  box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
+  width: fit-content;
+  margin-top: 50px;
+  padding: 9px 25px;
+  border-radius: 24px;
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  color: #FFFFFF;
+  cursor: pointer;
+  transition: transform 0.1s linear;
+}
+body .errorContainer .errorInfo button:hover {
+  transform: scale(0.9);
+}
+body .errorContainer .errorInfo button a {
+  text-decoration: none;
+}
+body .errorContainer .errorInfo button a:visited {
+  color: inherit;
+}
+
+/*# sourceMappingURL=error.css.map */
