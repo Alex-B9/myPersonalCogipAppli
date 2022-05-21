@@ -19,14 +19,12 @@ class ConnexionController extends Controller
            $errorMessage = new ErrorMessage();
 
            if (!is_null($user->getEmail()) && password_verify(Request::get()['userPassword'], $user->getPassword())) {
-               echo $user->getEmail() . "<br>";
-               echo $user->getPassword() . "<br>";
-
                // session start here, SESSION blablabla..
 
-               echo "Yay!<br>";
+               echo "You are connected !<br>";
            } else {
                echo $errorMessage->incorrectInformation();
+               $this->index();
            }
         }
     }

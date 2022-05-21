@@ -13,13 +13,10 @@ class CreateModel
         $this->db = Database::connect();
     }
 
-    public function createUser($companyId, $firstname, $lastname, $email, $password, $phone): void
+    public function createPeople(int $companyId, string $firstname, string $lastname, string $email, int $phone): void
     {
-//        $sql = "INSERT INTO people (`PeopleId`,`firstname`, `lastname`, `email`, `password`) VALUES (0,'$firstname','$lastname','$email', '$password')";
-//        $this->db->prepare($sql)->execute();
-
-        $sql = "INSERT INTO people (id_company, firstname, lastname, email, password, phone) 
-                VALUES (:id_company, :firstname, :lastname, :email, :password, :Phone)";
+        $sql = "INSERT INTO people (id_company, firstname, lastname, email, phone) 
+                VALUES (:id_company, :firstname, :lastname, :email, :Phone)";
 
         $statement = $this->db->prepare($sql);
 
@@ -28,8 +25,38 @@ class CreateModel
             ':firstname' => $firstname,
             ':lastname' => $lastname,
             ':email' => $email,
-            ':password' => $password,
             ':Phone' => $phone
+        ));
+    }
+
+    public function createCompany(int $companyType, string $companyName, string $country, int $vatNumber): void
+    {
+        $sql = "INSERT INTO companies (id_type, company_name, country, vat_number) 
+                VALUES (:id_type, :company_name, :country, :vat_number)";
+
+        $statement = $this->db->prepare($sql);
+
+        $statement->execute(array(
+            ':id_type' => $companyType,
+            ':company_name' => $companyName,
+            ':country' => $country,
+            ':vat_number' => $vatNumber
+        ));
+    }
+
+    public function createInvoice(int $companyId, int $companyPeople, int $invoiceNumber, string $lastname, string $email): void
+    {
+        $sql = "INSERT INTO invoices (id_company, id_people, number_invoice, lastname, email) 
+                VALUES (:id_company, :id_people, :number_invoice, :lastname, :email)";
+
+        $statement = $this->db->prepare($sql);
+
+        $statement->execute(array(
+            ':id_company' => $companyId,
+            ':id_people' => $companyPeople,
+            ':number_invoice' => $invoiceNumber,
+            ':lastname' => $lastname,
+            ':email' => $email
         ));
     }
 }

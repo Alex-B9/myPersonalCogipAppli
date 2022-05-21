@@ -32,6 +32,10 @@ switch ($url) {
         $contact = new ContactController();
         $contact->create();
         break;
+    case '/contact-store':
+        $contact = new ContactController();
+        $contact->store();
+        break;
     case '/contact-details':
         $contact = new ContactController();
         $contact->show();

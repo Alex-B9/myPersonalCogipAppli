@@ -14,7 +14,17 @@ class ContactController extends Controller
         require $this->view('contact_new');
     }
 
-    public function show()
+    public function store()
+    {
+       echo Request::get()['lastname'] . '<br>';
+       echo Request::get()['firstname'] . '<br>';
+       echo Request::get()['phone'] . '<br>';
+       echo Request::get()['email'] . '<br>';
+       echo Request::get()['company'] . '<br>';
+
+    }
+
+    public function show() // maybe ID ?
     {
         require $this->view('contact_details');
     }

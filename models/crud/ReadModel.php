@@ -24,7 +24,7 @@ class ReadModel
         return $stmt->fetchAll();
     }
 
-    public function getEmailFromTable($email, $tableName)
+    public function getEmailByRow($email, $tableName)
     {
         $sql = "SELECT * FROM $tableName WHERE email = '$email'";
 

@@ -8,11 +8,12 @@ use App\models\crud\ReadModel;
 
 class GetPeopleModel
 {
-    private $firstname;
-    private $lastname;
-    private $email;
-    private $phone;
-    private $dbRead;
+    private string $firstname;
+    private string $lastname;
+    private string $email;
+    private int $phone;
+
+    private ReadModel $dbRead;
 
     public function __construct($email)
     {
@@ -22,7 +23,7 @@ class GetPeopleModel
 
     public function getFirstname(): string
     {
-        $this->firstname = $this->dbRead->getEmailFromTable($this->email, 'people')['firstname'];
+        $this->firstname = $this->dbRead->getEmailByRow($this->email, 'people')['firstname'];
 
         Database::disconnect();
 
@@ -31,7 +32,7 @@ class GetPeopleModel
 
     public function getLastname(): string
     {
-        $this->lastname = $this->dbRead->getEmailFromTable($this->email, 'people')['lastname'];
+        $this->lastname = $this->dbRead->getEmailByRow($this->email, 'people')['lastname'];
 
         Database::disconnect();
 
@@ -40,7 +41,7 @@ class GetPeopleModel
 
     public function getEmail(): string
     {
-        $this->email = $this->dbRead->getEmailFromTable($this->email, 'people')['email'];
+        $this->email = $this->dbRead->getEmailByRow($this->email, 'people')['email'];
 
         Database::disconnect();
 
@@ -49,7 +50,7 @@ class GetPeopleModel
 
     public function getPhone(): int
     {
-        $this->phone = $this->dbRead->getEmailFromTable($this->email, 'people')['Phone'];
+        $this->phone = $this->dbRead->getEmailByRow($this->email, 'people')['Phone'];
 
         Database::disconnect();
 

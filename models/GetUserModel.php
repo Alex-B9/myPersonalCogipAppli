@@ -6,10 +6,10 @@ use App\models\crud\ReadModel;
 
 class GetUserModel
 {
-    private $email;
-    private $password;
+    private string $email;
+    private string $password;
 
-    private $dbRead;
+    private ReadModel $dbRead;
 
     public function __construct($email)
     {
@@ -19,16 +19,20 @@ class GetUserModel
 
     public function getEmail()
     {
-        $this->email = $this->dbRead->getEmailFromTable($this->email, 'user')['email'];
+        if (!is_bool($this->dbRead->getEmailByRow($this->email, 'accounts'))) {
+            $this->email = $this->dbRead->getEmailByRow($this->email, 'accounts')['email'];
 
-        Database::disconnect();
+            Database::disconnect();
 
-        return $this->email;
+            return $this->email;
+        }
+
+        return null;
     }
 
     public function getPassword()
     {
-        $this->password = $this->dbRead->getEmailFromTable($this->email, 'user')['password'];
+        $this->password = $this->dbRead->getEmailByRow($this->email, 'accounts')['password'];
 
         Database::disconnect();
 
