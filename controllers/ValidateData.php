@@ -14,9 +14,28 @@ class ValidateData
         return (!preg_match("/^[a-zA-Z_.-]{3,28}+@+[a-z]{3,15}+\.+[a-z]{2,6}$/", $email)) ? FALSE : trim($email);
     }
 
+    public function phoneIsValid($phoneNumber): int
+    {
+        return (!preg_match("/^\d{10}$/", $phoneNumber)) ? FALSE : trim($phoneNumber);
+    }
+
+    public function companyNameIsValid($companyName): string
+    {
+        return (!preg_match('/^[a-zA-Z]{3,70}$/', $companyName)) ? FALSE : stripslashes($companyName);
+    }
+
+    public function countryIsValid($country): string
+    {
+        return (!preg_match('/^[a-zA-Z]{3,25}$/', $country)) ? FALSE : stripslashes($country);
+    }
+
+    public function vatIsValid($vatNumber): string
+    {
+        return (!preg_match("/^[A-Z]{2}+\d{9}$/", $vatNumber)) ? FALSE : trim($vatNumber);
+    }
+
     public function passwordIsValid($password): string
     {
-        return (!preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[-_*])\S*$/', $password)) ?  FALSE : trim($password); // 1Maj,1min,8charac,1num,
-        //1special charac
+        return (!preg_match('/^\S*(?=\S{8,})(?=\S*[a-z])(?=\S*[A-Z])(?=\S*\d)(?=\S*[-_*])\S*$/', $password)) ?  FALSE : trim($password);
     }
 }

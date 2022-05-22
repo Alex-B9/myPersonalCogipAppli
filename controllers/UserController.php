@@ -6,7 +6,7 @@ use App\models\crud\ReadModel;
 
 class UserController
 {
-    public function userAlreadyExist($email): bool
+    public function peopleAlreadyExist($email): bool
     {
         $readDb = new ReadModel();
 

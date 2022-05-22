@@ -4,7 +4,7 @@ namespace App\models;
 
 use App\models\crud\CreateModel;
 
-class SetContactModel
+class SetContactModel // set people table.
 {
     private int $companyId;
     private int $phone;

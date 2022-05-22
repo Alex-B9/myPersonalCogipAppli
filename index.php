@@ -60,6 +60,10 @@ switch ($url) {
         $company = new CompaniesController();
         $company->create();
         break;
+    case '/company-store':
+        $company = new CompaniesController();
+        $company->store();
+        break;
     case '/company-details':
         $company = new CompaniesController();
         $company->show();
