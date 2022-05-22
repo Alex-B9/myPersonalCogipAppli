@@ -2,23 +2,34 @@
 
 namespace App\models;
 
+use App\models\crud\ReadModel;
+
 class GetCompanyModel
 {
-    private $name;
-    private $country;
-    private $vatNumber;
+    private int $id;
+    private string $name;
+    private string $country;
+    private string $vatNumber;
 
-    public function getName()
+    private ReadModel $readDb;
+
+    public function __construct($id)
+    {
+        $this->id = $id;
+        $this->readDb = new ReadModel();
+    }
+
+    public function getName(): string
     {
         return $this->name;
     }
 
-    public function getCountry()
+    public function getCountry(): string
     {
         return $this->country;
     }
 
-    public function getVatNumber()
+    public function getVatNumber(): string
     {
         return $this->vatNumber;
     }

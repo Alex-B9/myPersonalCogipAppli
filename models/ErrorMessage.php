@@ -44,7 +44,7 @@ class ErrorMessage
         return "Error: incorrect VAT !";
     }
 
-    public function companyCountry(): string
+    public function companyCountryError(): string
     {
         return "Error: incorrect country !";
     }

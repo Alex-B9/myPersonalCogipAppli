@@ -29,7 +29,7 @@ class CreateModel
         ));
     }
 
-    public function createCompany(int $companyType, string $companyName, string $country, int $vatNumber): void
+    public function createCompany(int $companyType, string $companyName, string $country, string $vatNumber): void
     {
         $sql = "INSERT INTO companies (id_type, company_name, country, vat_number) 
                 VALUES (:id_type, :company_name, :country, :vat_number)";

@@ -8,7 +8,7 @@ use App\models\Database;
 
 class ReadModel
 {
-    private $db;
+    private string|\PDO $db;
 
     public function __construct()
     {
@@ -33,5 +33,21 @@ class ReadModel
         return $stmt->fetch();
     }
 
+    public function getAllCompanyType(): bool|array
+    {
+        $sql = "SELECT * FROM type_company";
 
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
+
+    public function getCompanyByIdType(int $idType): bool|array
+    {
+        $sql = "SELECT * FROM companies WHERE Id_Type = $idType";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

@@ -9,7 +9,7 @@ class SetCompanyModel
     private int $companyType;
     private string $name;
     private string $country;
-    private int $vatNumber;
+    private string $vatNumber;
 
     private CreateModel $dbCreate;
 
@@ -39,7 +39,7 @@ class SetCompanyModel
         return $this;
     }
 
-    public function setVatNumber(int $vatNumber): SetCompanyModel
+    public function setVatNumber(string $vatNumber): SetCompanyModel
     {
         $this->vatNumber = htmlspecialchars($vatNumber);
 
