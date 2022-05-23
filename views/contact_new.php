@@ -1,4 +1,7 @@
 <?php
+
+use App\models\crud\ReadModel;
+
 $resetCss = './../public/styles/reset/reset.css';
 $pageCSS = './../public/styles/pages/new/new.css';
 $pageTitle = 'Ajouter contact'; // obligatoire
@@ -33,9 +36,11 @@ require "views/components/navigation.php";
             <div class="formItem">
                 <label for="company">Société</label>
                 <select name="company" id="company">
-                    <option>TRBA</option>
-                    <option>Société 2</option>
-                    <option>Société 3</option>
+                    <?php $companyName = new ReadModel();
+
+                    foreach ($companyName->getAllCompany() as $item) { ?>
+                        <option value=<?= $item['CompaniesId'] ?>><?= $item['company_name'] ?></option>
+                    <?php } ?>
                 </select>
             </div>
             <div class="formItem">

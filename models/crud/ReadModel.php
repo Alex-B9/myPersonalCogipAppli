@@ -1,7 +1,5 @@
 <?php
 
-// OK
-
 namespace App\models\crud;
 
 use App\models\Database;
@@ -31,6 +29,15 @@ class ReadModel
         $stmt = $this->db->prepare($sql);
         $stmt->execute();
         return $stmt->fetch();
+    }
+
+    public function getAllCompany(): bool|array
+    {
+        $sql = "SELECT * FROM companies";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
     }
 
     public function getAllCompanyType(): bool|array

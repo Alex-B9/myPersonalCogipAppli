@@ -19,6 +19,11 @@ class ErrorMessage
         return "Error: incorrect mail !";
     }
 
+    public function phoneError(): string
+    {
+        return "Error: incorrect phone number !";
+    }
+
     public function passwordError(): string
     {
         return "Error: incorrect password !";
@@ -48,4 +53,5 @@ class ErrorMessage
     {
         return "Error: incorrect country !";
     }
+
 }

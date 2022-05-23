@@ -62,7 +62,7 @@ class CompaniesController extends Controller
                 echo $error->incorrectInformation();
             }
 
-            header('location: /companies');
+             header('location: /companies');
         }
     }
 }
