@@ -57,4 +57,16 @@ class ReadModel
         $stmt->execute();
         return $stmt->fetchAll();
     }
+
+    public function getAllInvoices(): bool|array
+    {
+        $sql = "SELECT Id_Company, number_invoice, date, company_name, Type 
+                FROM ((invoices 
+                INNER JOIN companies c ON invoices.Id_Company = c.CompaniesId)
+                INNER JOIN type_company tc ON c.Id_Type = tc.Id_Type)";
+
+        $stmt = $this->db->prepare($sql);
+        $stmt->execute();
+        return $stmt->fetchAll();
+    }
 }

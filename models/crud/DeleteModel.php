@@ -16,7 +16,7 @@ class DeleteModel
         $this->user = $getUserModel;
     }
 
-    public function DeleteUser()
+    public function DeleteUser(): bool
     {
             $sql = "DELETE FROM `people` WHERE `email` = '{$this->user->getEmail()}'";
             $stmt = $this->db->prepare($sql);

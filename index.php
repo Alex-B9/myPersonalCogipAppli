@@ -77,5 +77,6 @@ switch ($url) {
         $dashboard->index();
         break;
     default:
+        // set status
         require('views/notFound.php');
 }
