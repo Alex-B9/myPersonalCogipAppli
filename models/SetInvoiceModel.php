@@ -6,29 +6,48 @@ use App\models\crud\CreateModel;
 
 class SetInvoiceModel
 {
-    private int $invoiceNumber;
-    private string $lastname;
-    private string $email;
+    private string $invoiceNumber;
+    private string $invoiceDate;
+    private int $companyId;
+    private int $peopleId;
 
     private CreateModel $dbCreate;
 
-    public function setInvoiceNumber(int $invoiceNumber): void
+    public function __construct()
     {
-        $this->invoiceNumber = $invoiceNumber;
+        $this->dbCreate = new CreateModel();
     }
 
-    public function setLastname(string $lastname): void
+    public function setInvoiceNumber(string $invoiceNumber): SetInvoiceModel
     {
-        $this->lastname = $lastname;
+        $this->invoiceNumber = htmlspecialchars($invoiceNumber);
+
+        return $this;
     }
 
-    public function setEmail(string $email): void
+    public function setDate(string $invoiceDate): SetInvoiceModel
     {
-        $this->email = $email;
+        $this->invoiceDate = date('Y-m-d', strtotime($invoiceDate));
+
+        return $this;
+    }
+
+    public function setCompanyId(int $invoiceCompany): SetInvoiceModel
+    {
+        $this->companyId = htmlspecialchars($invoiceCompany);
+
+        return $this;
+    }
+
+    public function setContactId(int $invoiceContact): SetInvoiceModel
+    {
+        $this->peopleId = htmlspecialchars($invoiceContact);
+
+        return $this;
     }
 
     public function setInvoiceDb(): void
     {
-        $this->dbCreate->createInvoice(); // heuu il y a des choses a faire... !
+        $this->dbCreate->createInvoice($this->companyId, $this->peopleId, $this->invoiceNumber, $this->invoiceDate);
     }
 }

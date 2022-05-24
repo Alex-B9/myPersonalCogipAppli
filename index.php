@@ -48,6 +48,10 @@ switch ($url) {
         $invoice = new InvoicesController();
         $invoice->create();
         break;
+    case '/invoice-store':
+        $invoice = new InvoicesController();
+        $invoice->store();
+        break;
     case '/invoice-details':
         $invoice = new InvoicesController();
         $invoice->show();

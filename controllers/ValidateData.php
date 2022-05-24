@@ -16,22 +16,27 @@ class ValidateData
 
     public function phoneIsValid($phoneNumber): int
     {
-        return (!preg_match("/^\d{5,10}$/", $phoneNumber)) ? FALSE : trim($phoneNumber);
+        return (!preg_match("/[\d-]{8,10}/", $phoneNumber)) ? FALSE : trim($phoneNumber);
     }
 
     public function companyNameIsValid($companyName): string
     {
-        return (!preg_match('/^[a-zA-Z_.-]{3,34} [a-zA-Z_.-]{3,35}$/', $companyName)) ? FALSE : stripslashes($companyName);
+        return (!preg_match('/^[a-zA-Z_.-].{3,35}}$/', $companyName)) ? FALSE : stripslashes($companyName);
     }
 
     public function countryIsValid($country): string
     {
-        return (!preg_match('/^[a-zA-Z]{3,12} [a-zA-Z]{0,12}$/', $country)) ? FALSE : stripslashes($country);
+        return (!preg_match('/^[a-zA-Z].{3,12}$/', $country)) ? FALSE : stripslashes($country);
     }
 
     public function vatIsValid($vatNumber): string
     {
         return (!preg_match("/^[A-Z]{2}+\d{5,12}$/", $vatNumber)) ? FALSE : trim($vatNumber);
+    }
+
+    public function invoiceNumberIsValid($invoiceNumber): bool|string
+    {
+        return (!preg_match('/^[A-Z]{1}+\d{8}+-+\d{3}$/', $invoiceNumber)) ? FALSE : trim($invoiceNumber);
     }
 
     public function passwordIsValid($password): string

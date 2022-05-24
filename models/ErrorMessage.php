@@ -54,4 +54,13 @@ class ErrorMessage
         return "Error: incorrect country !";
     }
 
+    public function invoiceError(): string
+    {
+        return "Error: incorrect invoice number !";
+    }
+
+    public function DateError(): string
+    {
+        return "Error: incorrect date format !";
+    }
 }
