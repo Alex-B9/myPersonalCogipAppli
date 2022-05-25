@@ -10,13 +10,24 @@ ob_start();
 
 <?php require "views/components/navigation.php"; ?>
 
-    <div class="titleContainer">
-        <h1>COGIP</h1>
-        <h2>Liste des contacts</h2>
-    </div>
 
-    <div class="add">
-        <a href="/contact-new"><img src="./public/assets/img/user.png"> Nouveau contact</a>
+    <div class="bg-color">
+    <div class="container">
+        <div class="container-header">
+            <div class="titleContainer">
+                <div>
+                    <h1>COGIP</h1>
+                    <p class="subtitle">Liste des contact</p>
+                </div>
+                <div class="add">
+                    <a href="/contact-new">
+                        <img src="./public/assets/img/add-1.png"> Nouveau contact</a>
+                </div>
+            </div>
+            <div class="container-img">
+                <img class="img-contact" src="../public/assets/img/email.png" alt="image company">
+            </div>
+        </div>
     </div>
 
     <div class="tableContainer">

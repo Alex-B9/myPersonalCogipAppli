@@ -6,6 +6,7 @@
   "scripts": {
     "sassHome": "sass --watch sass/pages/mainHome.scss:public/styles/pages/home/home.css",
     "sassContactNew" : "sass --watch sass/pages/mainContactNew.scss:public/styles/pages/contactNew/contactNew.css",
+    "sassRegister": "sass --watch sass/pages/mainRegister.scss:public/styles/pages/register/register.css",
     "sassNew" : "sass --watch sass/pages/mainNew.scss:public/styles/pages/new/new.css",
     "sassConnect": "sass --watch sass/pages/mainConnect.scss:public/styles/pages/connect/connect.css",
     "sassList": "sass --watch sass/pages/mainList.scss:public/styles/pages/list/list.css",

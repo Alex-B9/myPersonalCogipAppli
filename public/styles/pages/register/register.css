@@ -1,0 +1,178 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+header {
+  font-family: "Raleway", sans-serif;
+  width: 100%;
+  margin-top: 25px;
+}
+header .navbarContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+header .navbarContainer img {
+  width: 150px;
+}
+header .navbarContainer .linksContainer {
+  margin-left: auto;
+  margin-right: auto;
+}
+header .navbarContainer .linksContainer ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+header .navbarContainer .linksContainer ul li {
+  list-style-type: none;
+  font-size: 16px;
+  color: #48AFCF;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a {
+  position: relative;
+  text-decoration: none;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  background-color: #48AFCF;
+  bottom: -7px;
+  left: 0;
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease-in-out;
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+header .navbarContainer .linksContainer ul li:nth-child(-n+4) a:visited {
+  color: inherit;
+}
+header .navbarContainer .linksContainer ul li:last-child {
+  border: 1px solid #48AFCF;
+  padding: 20px 20px;
+}
+header .navbarContainer .linksContainer ul li:last-child a {
+  text-decoration: none;
+  color: #48AFCF;
+}
+
+input, label {
+  font-family: "roboto", sans-serif;
+}
+
+.register-titre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 0;
+  margin-bottom: 40px;
+}
+.register-titre .soustitre-register {
+  margin-right: 220px;
+  color: #525252;
+  font-family: "Inter", sans-serif;
+  font-size: 26px;
+  letter-spacing: 3px;
+}
+.register-titre h1 {
+  font-size: 70px;
+  display: flex;
+  font-family: "Inter", sans-serif;
+  font-weight: 800;
+  color: #FFBF1C;
+  letter-spacing: 1px;
+  margin-right: 370px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: 18px;
+  letter-spacing: 1px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 17px;
+  color: #414141;
+}
+
+input {
+  box-sizing: border-box;
+  width: 350px;
+  border: none;
+  padding: 11px;
+  background: #DCEDF0;
+  border-radius: 10px;
+}
+
+.control {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 147px;
+  height: 41px;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+  background: #FFB800;
+  color: white;
+  border: none;
+  box-shadow: -2px 10px 3px rgba(86, 71, 6, 0.01), -1px 7px 3px rgba(86, 71, 6, 0.12), -1px 4px 2px rgba(86, 71, 6, 0.4), 0px 2px 2px rgba(86, 71, 6, 0.68), 0px 0px 1px rgba(86, 71, 6, 0.79), 0px 0px 0px rgba(86, 71, 6, 0.8);
+  border-radius: 24px;
+}
+
+.container-form-pos {
+  display: flex;
+  justify-content: center;
+}
+
+.container-form {
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  width: auto;
+  height: 450px;
+  padding: 5px;
+  -webkit-box-shadow: 1px 8px 28px 0px rgba(42, 55, 78, 0.62);
+  box-shadow: 1px 8px 28px 0px rgba(42, 55, 78, 0.62);
+}
+
+.container-left {
+  max-width: 400px;
+  max-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  background-color: #EAF7F9;
+}
+.container-left .img-register {
+  width: 630px;
+  transform: translateX(40px);
+}
+
+.container-right {
+  padding-left: 35px;
+  padding-right: 50px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  align-content: flex-start;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container-right label {
+  padding-bottom: 10px;
+}
+
+/*# sourceMappingURL=register.css.map */

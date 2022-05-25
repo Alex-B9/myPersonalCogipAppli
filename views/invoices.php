@@ -10,13 +10,23 @@ ob_start();
 
 <?php require "views/components/navigation.php"; ?>
 
-    <div class="titleContainer">
-        <h1>COGIP</h1>
-        <h2>Liste des factures</h2>
-    </div>
-
-    <div class="add">
-        <a href="/invoice-new"><img src="./public/assets/img/document-1.png"> Nouvelle Facture</a>
+    <div class="bg-color">
+    <div class="container">
+        <div class="container-header">
+            <div class="titleContainer">
+                <div>
+                    <h1>COGIP</h1>
+                    <p class="subtitle">Liste des factures</p>
+                </div>
+                <div class="add">
+                    <a href="/invoice-new">
+                        <img src="./public/assets/img/add-1.png"> Nouvelle facture</a>
+                </div>
+            </div>
+            <div class="container-img">
+                <img class="img-facture" src="../public/assets/img/sales-team.png" alt="image company">
+            </div>
+        </div>
     </div>
 
     <div class="tableContainer">
