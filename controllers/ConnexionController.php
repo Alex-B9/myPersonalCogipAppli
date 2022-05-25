@@ -14,7 +14,7 @@ class ConnexionController extends Controller
 
     public function get()
     {
-        if (isset($_POST['Submit'])) {
+        if (isset(Request::get()['submit'])) {
            $user = new GetUserModel(Request::get()['userEmail']);
            $errorMessage = new ErrorMessage();
 
