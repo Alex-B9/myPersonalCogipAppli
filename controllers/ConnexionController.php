@@ -14,18 +14,15 @@ class ConnexionController extends Controller
 
     public function get()
     {
-        if (isset(Request::get()['submit'])) {
-           $user = new GetUserModel(Request::get()['userEmail']);
-           $errorMessage = new ErrorMessage();
+        $user = new GetUserModel(Request::get()['userEmail']);
+        $errorMessage = new ErrorMessage();
 
-           if (!is_null($user->getEmail()) && password_verify(Request::get()['userPassword'], $user->getPassword())) {
-               // session start here, SESSION blablabla..
+        if (!is_null($user->getEmail()) && password_verify(Request::get()['userPassword'], $user->getPassword())) {
+            // session start here, SESSION blablabla..
 
-               echo "You are connected !<br>";
-           } else {
-               echo $errorMessage->incorrectInformation();
-               $this->index();
-           }
+            echo "You are connected !<br>";
+        } else {
+            echo $errorMessage->incorrectInformation();
         }
     }
 }
