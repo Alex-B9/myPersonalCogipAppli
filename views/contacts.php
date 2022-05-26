@@ -47,11 +47,19 @@ ob_start();
 
                 foreach ($getPeople->getAllPeople() as $item) { ?>
                     <tr>
-                        <td id="contactName"><?= $item['lastname'] . $item['firstname'] ?></td>
+                        <td id="contactName">
+                            <a href=/contact-details?id=<?= $item['Id_People'] ?>>
+                                <?= $item['lastname'] . $item['firstname'] ?>
+                            </a>
+                        </td>
                         <td id="contactPhone"><?= $item['Phone'] ?></td>
                         <td id="contactEmail"><?= $item['email'] ?></td>
                         <td id="contactCompany">Raviga</td>
-                        <td><img src="./public/assets/img/delete-2.png"></td>
+                        <td>
+                            <a href="#">
+                                <img src="./public/assets/img/delete-2.png">
+                            </a>
+                        </td>
                     </tr>
                 <?php } ?>
                 </tbody>

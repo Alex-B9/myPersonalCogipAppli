@@ -66,7 +66,11 @@ require "views/components/navigation.php";
                             <td class="facture-style"><?= $item['number_invoice'] ?></td>
                             <td><?= $item['date'] ?></td>
                             <td><?= $item['company_name'] ?></td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td>
+                                <a href="#">
+                                    <img src="../public/assets/img/delete-2.png" alt="delete">
+                                </a>
+                            </td>
                         </tr>
                     <?php } ?>
                     </tbody>
@@ -93,7 +97,13 @@ require "views/components/navigation.php";
                             <td><?= $item['Phone'] ?></td>
                             <td><?= $item['email'] ?></td>
                             <td><?= $item['company_name'] ?></td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td>
+                                <a href="#">
+                                    <img src="../public/assets/img/delete-2.png" alt="delete">
+                                </a>
+                            </td>
+
+
                         </tr>
                     <?php } ?>
                     </tbody>
@@ -119,7 +129,11 @@ require "views/components/navigation.php";
                             <td><?= $item['vat_number'] ?></td>
                             <td><?= $item['country'] ?></td>
                             <td><?= $item['Type'] ?></td>
-                            <td><img src="../public/assets/img/delete-2.png" alt="delete"></td>
+                            <td>
+                                <a href="#">
+                                    <img src="../public/assets/img/delete-2.png" alt="delete">
+                                </a>
+                            </td>
                         </tr>
                     <?php } ?>
                     </tbody>
